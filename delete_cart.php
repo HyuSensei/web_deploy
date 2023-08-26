@@ -4,7 +4,7 @@ try {
     $id="";
     if(isset($_GET['id'])){
         $id=$_GET['id'];
-        echo $id;
+        
     }
     unset($_SESSION['cart'][$id]);
     header('location:shop-cart.php');
