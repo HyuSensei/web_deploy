@@ -18,7 +18,7 @@ if (isset($_POST['register'])) {
         $content = "<h2>Bạn đã đăng ký tài khoản với Skinlele</h2>
                        <h5>Xác minh tài khoản của bạn</h5>
                        </br>
-                       <a href='http://localhost/do_an_web-main/verify_register.php?verify_token=$verify_token'>Click me</a>";
+                       <a href='https://skinlele.azurewebsites.net/verify_register.php?verify_token=$verify_token'>Click me</a>";
 
         $sql_check_mail = "SELECT * FROM custumers WHERE email='$email' LIMIT 1";
         $query_check_mail = mysqli_query($connect, $sql_check_mail);
