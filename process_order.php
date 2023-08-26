@@ -48,9 +48,8 @@ try {
                         //echo "Đặt hàng thành công!";
                         sendmail($acc_mail, $name, $title, $content);
                         unset($_SESSION['cart']);
-                        $_SESSION['order_success'] = true;
-                        header('location:shop-cart.php');
-                        exit();
+                        echo '<script>alert("Đặt hàng thành công !");</script>';
+                        echo '<script>window.location.href = "shop-cart.php";</script>';
                     }
                 } elseif ($method == 'ordervnpay') {
 
