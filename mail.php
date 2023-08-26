@@ -31,7 +31,7 @@ function sendmail($email, $name, $title, $content)
         $mail->Body    = $content;
 
         $mail->send();
-        echo 'Mail đã được gửi!';
+        //echo 'Mail đã được gửi!';
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
@@ -63,7 +63,7 @@ function send_register($email, $name, $title, $content, $verify_token)
         $mail->Body    = $content;
 
         $mail->send();
-        echo 'Mail đã được gửi!';
+        //echo 'Mail đã được gửi!';
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
