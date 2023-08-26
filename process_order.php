@@ -2,6 +2,10 @@
 session_start();
 require_once('db/config.php');
 require_once('mail.php');
+if (isset($_SESSION['order_success'])) {
+    header('location:shop-cart.php');
+    exit();
+}
 if (isset($_SESSION['email']) && isset($_SESSION['name'])) {
     $acc_mail = $_SESSION['email'];
     $name_customer = $_SESSION['name'];
