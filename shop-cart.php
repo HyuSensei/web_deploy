@@ -16,10 +16,7 @@ if (isset($_SESSION['id'])) {
     $phone = "Nhập số điện thoại...";
     $address = "Nhâp địa chỉ...";
 }
-if (isset($_SESSION['order_success']) && $_SESSION['order_success']) {
-    echo "<script>alert('Đặt hàng thành công!');</script>";
-    unset($_SESSION['order_success']);
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
