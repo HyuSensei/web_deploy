@@ -41,12 +41,12 @@ try {
                         values('$product_id','$order_id','$quantity')";
                             mysqli_query($connect, $sql);
                         }
-                        echo "Đặt hàng thành công!";
+                        //echo "Đặt hàng thành công!";
                         sendmail($acc_mail, $name, $title, $content);
                         unset($_SESSION['cart']);
                         $_SESSION['order_success'] = true;
-                        header('location:shop-cart.php');
-                        exit();
+                        echo '<script>alert("Đặt hàng thành công !");</script>';
+                        echo '<script>window.location.href = "shop-cart.php";</script>';
                     }
                 } elseif ($method == 'ordervnpay') {
 
@@ -55,7 +55,7 @@ try {
                     $vnp_TmnCode = "CGXZLS0Z";
                     $vnp_HashSecret = "XNBCJFAKAZQSGTARRLGCHVZWCIOIGSHN";
                     $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-                    $vnp_Returnurl = "http://localhost/do_an_web-main/vnpay_return.php";
+                    $vnp_Returnurl = "https://skinlele.azurewebsites.net/vnpay_return.php";
                     $vnp_apiUrl = "http://sandbox.vnpayment.vn/merchant_webapi/merchant.html";
                     $apiUrl = "https://sandbox.vnpayment.vn/merchant_webapi/api/transaction";
 
