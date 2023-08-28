@@ -132,6 +132,7 @@ try {
                                 $sql = "INSERT INTO order_detail(id_product,id_order,quantity_order)
                                 values('$product_id','$order_id','$quantity')";
                                 mysqli_query($connect, $sql);
+                                unset($_SESSION['cart']);
                             }
                         }
                     }
