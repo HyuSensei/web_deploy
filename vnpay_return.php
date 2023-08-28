@@ -131,7 +131,7 @@
                     if ($secureHash == $vnp_SecureHash) {
                         if ($_GET['vnp_ResponseCode'] == '00') {
                             echo "<span style='color:blue'>Thanh Toán Thành Công</span>";
-                            unset($_SESSION['cart']);
+                            //unset($_SESSION['cart']);
                             // $total = $_SESSION['total'];
                             // $content = "<h2>Bạn vừa đặt 1 đơn hàng từ Skinlele</h2>
                             // <h5>$total đ</h5>";
